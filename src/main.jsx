@@ -3,10 +3,7 @@
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 
-export const Context = createContext({
-  isAuthorized: false,
-  user : null
-});
+export const Context = createContext();
 
 const AppWrapper = () => {
   const [isAuthorized, setIsAuthorized] = useState(false);

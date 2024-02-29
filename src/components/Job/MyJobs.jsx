@@ -218,13 +218,13 @@ const MyJobs = () => {
                                  <input
                                   type="number"
                                   disabled={
-                                    editingMode !== element._id ? true : false
+                                    editingMode === element._id ?  false  : true
                                   }
                                   value={element.SalaryFrom}
                                   onChange={(e) =>
                                     handleInputChange(
                                       element._id,
-                                      "salaryFrom",
+                                      "SalaryFrom",
                                       e.target.value
                                     )
                                   }
@@ -239,7 +239,7 @@ const MyJobs = () => {
                                   onChange={(e) =>
                                     handleInputChange(
                                       element._id,
-                                      "salaryTo",
+                                      "SalaryTo",
                                       e.target.value
                                     )
                                   }

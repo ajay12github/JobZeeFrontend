@@ -24,25 +24,6 @@ import NotFound from "./components/NotFound/NotFound";
 import MyJobs from "./components/Job/MyJobs";
 
 const App = () => {
-  const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await axios.get(
-          "https://jobzeebackend.onrender.com/api/v1/user/getuser",
-          {
-            withCredentials: true,
-          }
-        );
-        setUser(response.data.user);
-        
-      } catch (error) {
-         
-      }
-    };
-    fetchUser();
-  }, [isAuthorized]);
-
   return (
     <>
       <BrowserRouter>

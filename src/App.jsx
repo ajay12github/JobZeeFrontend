@@ -1,10 +1,5 @@
  
-
-
-
-
-
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import "./App.css";
 import { Context } from "./main";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -38,8 +33,7 @@ const App = () => {
           <Route path="/job/me" element={<MyJobs/>} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
-        <Footer />
-        <Toaster />
+        <Footer/>
       </BrowserRouter>
     </>
   );

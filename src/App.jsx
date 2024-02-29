@@ -10,7 +10,7 @@ import { Context } from "./main";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import Navbar from "./components/Layout/Navbar";
 import Footer from "./components/Layout/Footer";
@@ -35,9 +35,9 @@ const App = () => {
           }
         );
         setUser(response.data.user);
-        setIsAuthorized(true);
+        
       } catch (error) {
-        setIsAuthorized(false);
+         
       }
     };
     fetchUser();

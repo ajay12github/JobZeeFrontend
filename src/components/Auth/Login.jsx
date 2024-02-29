@@ -27,12 +27,13 @@ const Login = () => {
           withCredentials: true,
         }
       );
-      toast.success(data.message);
+    //  toast.success(data.message);
       setEmail("");
       setPassword("");
       setRole("");
       setIsAuthorized(true);
       setUser(data.user)
+      toast.success(data.user.name)
     } catch (error) {
       toast.error(error.response.data.message);
     }
